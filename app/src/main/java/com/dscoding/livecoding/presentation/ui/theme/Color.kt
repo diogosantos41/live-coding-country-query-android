@@ -1,4 +1,4 @@
-package com.dscoding.livecoding.ui.theme
+package com.dscoding.livecoding.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

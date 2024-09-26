@@ -1,6 +1,5 @@
-package com.dscoding.livecoding.ui.theme
+package com.dscoding.livecoding.presentation.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
