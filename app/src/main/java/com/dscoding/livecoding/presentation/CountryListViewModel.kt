@@ -17,6 +17,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -37,6 +38,7 @@ class CountryListViewModel @Inject constructor(private val countryRepository: Co
     init {
         searchText
             .debounce(1000L)
+            .filter { it?.isNotEmpty() == true }
             .onEach { query ->
                 query?.let {
                     getCountries(query)

@@ -83,4 +83,5 @@ dependencies {
 
     // Testing
     testImplementation(libs.google.truth)
+    testImplementation(libs.coroutines.test)
 }
